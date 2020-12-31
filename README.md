@@ -1,9 +1,4 @@
-<!--
- * @Author: maple
- * @Date: 2020-12-31 10:21:51
- * @LastEditors: maple
- * @LastEditTime: 2020-12-31 10:23:06
--->
+simple sdk for dingtalk robot
 ## Usage
 
 ```typescript
