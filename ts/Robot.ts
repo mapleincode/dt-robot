@@ -2,14 +2,14 @@
  * @Author: maple
  * @Date: 2020-12-30 14:24:07
  * @LastEditors: maple
- * @LastEditTime: 2020-12-31 11:31:41
+ * @LastEditTime: 2020-12-31 14:17:36
  */
 import sign from './sign'
 import axios from 'axios'
 import querystring from 'querystring'
 
 import TextMessage from './TextMessage'
-import ActionCardMessage from './ActionCardMessgae';
+import ActionCardMessage from './ActionCardMessage';
 import FeedCardMessage from './FeedCardMessage';
 import LinkMessage from './LinkMessage';
 import MarkdownMessage from './MarkdownMessage';
