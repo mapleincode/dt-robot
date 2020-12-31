@@ -2,12 +2,12 @@
  * @Author: maple
  * @Date: 2020-12-30 14:30:01
  * @LastEditors: maple
- * @LastEditTime: 2020-12-30 18:12:12
+ * @LastEditTime: 2020-12-31 11:32:19
  */
 import Robot from './Robot'
 
 export default class Message {
-  private robot: Robot;
+  private robot: Robot|null;
   private isAtAll: boolean;
   private atMobiles: string[];
   protected title: string;
@@ -26,6 +26,11 @@ export default class Message {
 
   get data(): object {
     return {};
+  }
+
+  setRobot(robot: Robot) {
+    this.robot = robot;
+    return this;
   }
 
   setAtAll() {
@@ -57,6 +62,9 @@ export default class Message {
       at: {
         atMobiles: this.atMobiles
       }
+    }
+    if (!this.robot) {
+      throw new Error('robot is not define');
     }
     return this.robot.send(queryData);
   }

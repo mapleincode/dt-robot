@@ -2,14 +2,18 @@
  * @Author: maple
  * @Date: 2020-12-30 14:24:07
  * @LastEditors: maple
- * @LastEditTime: 2020-12-31 10:14:42
+ * @LastEditTime: 2020-12-31 11:31:41
  */
 import sign from './sign'
 import axios from 'axios'
 import querystring from 'querystring'
 
 import TextMessage from './TextMessage'
-// import ActionCardMessage from './ActionCardMessgae';
+import ActionCardMessage from './ActionCardMessgae';
+import FeedCardMessage from './FeedCardMessage';
+import LinkMessage from './LinkMessage';
+import MarkdownMessage from './MarkdownMessage';
+import Message from './Message'
 
 interface RobotOptions {
   timeout: number;
@@ -61,5 +65,26 @@ export default class Robot {
 
   createTextMessage() {
     return new TextMessage(this);
+  }
+
+  createActionCardMessage() {
+    return new ActionCardMessage(this);
+  }
+
+  createFeedCardMessage() {
+    return new FeedCardMessage(this);
+  }
+
+  createLinkMessage() {
+    return new LinkMessage(this);
+  }
+
+  createMarkdownMessage() {
+    return new MarkdownMessage(this);
+  }
+
+  createMessage(message: Message) {
+    message.setRobot(this);
+    return message;
   }
 }
