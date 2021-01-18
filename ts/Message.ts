@@ -2,7 +2,7 @@
  * @Author: maple
  * @Date: 2020-12-30 14:30:01
  * @LastEditors: maple
- * @LastEditTime: 2020-12-31 11:32:19
+ * @LastEditTime: 2021-01-18 12:39:51
  */
 import Robot from './Robot'
 
@@ -58,8 +58,8 @@ export default class Message {
     const queryData = {
       ...data,
       msgtype: this.msgtype,
-      isAtAll: this.isAtAll,
       at: {
+        isAtAll: this.isAtAll,
         atMobiles: this.atMobiles
       }
     }
