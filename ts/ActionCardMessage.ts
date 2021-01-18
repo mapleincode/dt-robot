@@ -2,13 +2,13 @@
  * @Author: maple
  * @Date: 2020-12-30 17:37:06
  * @LastEditors: maple
- * @LastEditTime: 2020-12-30 17:47:53
+ * @LastEditTime: 2020-12-31 14:27:18
  */
 import Message from './Message'
 import Robot from './Robot'
 import Button from './Button'
 
-export default class TextMessage extends Message {
+export default class ActionCardMessage extends Message {
   private hideAvator: boolean;
   private btnOrientation: boolean;
   private singleURL: string;

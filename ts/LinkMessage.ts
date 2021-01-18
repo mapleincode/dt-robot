@@ -2,12 +2,12 @@
  * @Author: maple
  * @Date: 2020-12-30 17:30:32
  * @LastEditors: maple
- * @LastEditTime: 2020-12-30 18:10:44
+ * @LastEditTime: 2020-12-31 15:18:39
  */
 import Message from './Message'
 import Robot from './Robot'
 
-export default class MarkdownMessage extends Message {
+export default class LinkMessage extends Message {
   private picUrl: string;
   private messageUrl: string;
 

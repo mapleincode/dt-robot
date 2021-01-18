@@ -2,7 +2,7 @@
  * @Author: maple
  * @Date: 2020-12-30 17:24:24
  * @LastEditors: maple
- * @LastEditTime: 2020-12-30 18:10:59
+ * @LastEditTime: 2021-01-18 12:11:10
  */
 
 import Message from './Message'
@@ -17,11 +17,13 @@ export default class MarkdownMessage extends Message {
     this.msgtype = 'markdown';
     this.markdown = '';
   }
-
+  
   get data () {
     return {
-      text: this.markdown,
-      title: this.title
+      markdown: {
+        text: this.markdown,
+        title: this.title
+      }
     };
   }
 
